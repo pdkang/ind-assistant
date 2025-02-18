@@ -1,0 +1,15 @@
+version: 1.0
+runtime: python3
+build:
+  commands:
+    build:
+      - pip install -r requirements.txt
+run:
+  runtime-version: 3.8.16
+  command: streamlit run streamlit_app.py
+  network:
+    port: 8501
+    env: PORT
+env:
+  - name: STREAMLIT_SERVER_PORT
+    value: "8501"
